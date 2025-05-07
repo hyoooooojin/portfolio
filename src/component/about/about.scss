@@ -1,0 +1,107 @@
+.about{
+    display: flex;
+    gap: 30px;
+
+    a {
+        color: white;
+    }
+}
+
+.photo {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.infoBox{
+    margin-left: 40px;
+}
+
+.info{
+    width: 220px;
+    height: 40px;
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    filter: var(--glass-shadow);
+    border: var(--glass-border);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+
+    .infoDesc {
+        margin-left: 26px;
+        opacity: 0.7;
+
+        .infoIcon {
+            font-size: 12px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.edu {
+    width: 220px;
+    color: white;
+    margin-bottom: 15px;
+
+    .eduTitle {
+        opacity: 0.7;
+        margin-bottom: 7px; 
+    }
+    
+    .skills{
+        width: 140%;
+        margin-bottom: 14px;
+    }
+
+    .eduBox{
+        width: 100%;
+        height: 70px;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px); /* 블러 효과 */
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .school {
+           margin-left: 26px;
+           opacity: 0.7;
+        }
+
+        .date {
+            margin-left: 26px;
+            opacity: 0.7;
+            font-size: 0.8em;
+            margin-top: 1px;
+        }
+    }
+
+    span {
+        font-size: 0.7em;
+        color: white ;
+        padding: 5px 7px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.5);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+        margin-right: 5px;
+    }
+
+
+
+}
+

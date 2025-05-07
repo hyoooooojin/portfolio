@@ -1,0 +1,28 @@
+.App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    /*  Glassmorphism  */
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(10px);
+    --glass-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-radius: 16px;
+
+    /*
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    filter: var(--glass-shadow);
+    border: var(--glass-border);
+    border-radius: var(--glass-radius);
+    */
+
+    --center-translate: translate(-50%, -50%);
+    --white-glow-shadow: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.4));
+}
+       
