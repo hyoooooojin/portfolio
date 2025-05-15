@@ -22,14 +22,14 @@ const About = () => {
         </div>
         <div className="info">
           <div className="eduBox">
-            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/><a href="https://github.com/hyoooooojin" target="_blank">github.com/hyoooooojin</a></p>
+            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>010 2513 4154</p>
           </div>
         </div>
-        {/* <div className="info">
+        <div className="info">
           <div className="eduBox">
-            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>hyoooooojin@daum.net</p>
+            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>hy9jin4@gmail.com</p>
           </div>
-        </div> */}
+        </div>
       </div>
 
 
@@ -56,7 +56,10 @@ const About = () => {
             <span>REACT</span>
             <span>SCSS</span>
             <span>TAILWIND</span> 
-            </div>
+          </div>
+          <div className="skills">
+            <span>REACT ROUTER DOM</span> 
+          </div>
           <div className="skills">
             <span>GIT</span>
             <span>GITHUB</span> 

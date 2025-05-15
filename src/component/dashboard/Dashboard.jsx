@@ -18,11 +18,10 @@ const Dashboard = () => {
     works: <Works />
   };
 
-
   return (
     <div className="dashboardContainer">
         <div className="navbarContainer"><Navbar setSelected={setSelected} /></div>
-        <div className="contentContainer"><Content selected={selected} components={components} /></div>  
+        <div className={`contentContainer ${selected === 'home' ? 'centered' : ''}`}><Content selected={selected} components={components} /></div>  
     </div>
   )
 }
