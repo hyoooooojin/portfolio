@@ -15,7 +15,7 @@
         color: white;
 
         .navText{
-            @media screen and (max-width: 1000px) {
+            @media screen and (max-width: 1240px) {
                 display: none;
             }
         }   
@@ -25,21 +25,24 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 16px;
 
         .list {
             display: flex;
             align-items: center;
             color: white;
+            background-color: transparent;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+            border: transparent;
             cursor: pointer;
+            font-size: 0.95rem;
 
             .listIcon {
                 margin-right: 24px;
                 font-size: 18px;
                 transition: opacity all 2s;
 
-                @media screen and (max-width: 1150px) {
+                @media screen and (max-width: 1240px) {
                     margin-right:0;
                 }
 
@@ -49,7 +52,7 @@
                 display: inline;
                 transition: opacity all 2s;
 
-                @media screen and (max-width: 1150px) {
+                @media screen and (max-width: 1240px) {
                     display: none;
                 }
             }

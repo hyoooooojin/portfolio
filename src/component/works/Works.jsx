@@ -10,19 +10,6 @@ import abib from '../../assets/images/abib.jpg';
 
 const slides = [
   {
-    title: 'Dev-kit',
-    link: 'https://hyoooooojin.github.io/evian/',
-    topKeyword: 'redesign',
-    image: devKit,
-    imageHovered: devKitHovered,
-    keywordsFirst: ['figma', 'vite', 'react', 'scss', 'mui'],
-    keywordsSecond: ['git', 'github', 'github-pages'],
-    direction: 'n',
-    imgStyle: { width: '100%', height: '100%', objectPosition: 'center', transition: 'all 0.4s'},
-    githubLink: 'https://github.com/hyoooooojin/dev-kit',
-    figmaLink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=9-3&t=tFdL2DPPJJDHWqo7-1'
-  },
-  {
     title: 'EVIAN',
     link: 'https://hyoooooojin.github.io/evian/',
     topKeyword: 'redesign',
@@ -32,7 +19,7 @@ const slides = [
     direction: 'y',
     imgStyle: { width: '100%', transition: 'transform 4s ease' },
     githubLink: 'https://github.com/hyoooooojin/evian',
-    figmalink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=1-80&t=TU0waQS05QFlKhnD-1'
+    figmaLink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=1-80&t=TU0waQS05QFlKhnD-1'
   },
   {
     title: 'THENORTHFACE',
@@ -44,7 +31,7 @@ const slides = [
     direction: 'y',
     imgStyle: { width: '100%', transition: 'transform 8s ease' },
     githubLink: 'https://github.com/hyoooooojin/thenorthface',
-    figmalink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=1-437&t=TU0waQS05QFlKhnD-1'
+    figmaLink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=1-437&t=TU0waQS05QFlKhnD-1'
   },
   {
     title: 'ABIB',
@@ -56,7 +43,20 @@ const slides = [
     direction: 'x',
     imgStyle: { height: '100%', transition: 'transform 10s ease' },
     githubLink: 'https://github.com/hyoooooojin/abib',
-    figmalink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=0-1&t=TU0waQS05QFlKhnD-1'
+    figmaLink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=0-1&t=TU0waQS05QFlKhnD-1'
+  },
+  {
+    title: 'Dev-kit',
+    link: 'https://hyoooooojin.github.io/dev-kit/',
+    topKeyword: 'design',
+    image: devKit,
+    imageHovered: devKitHovered,
+    keywordsFirst: ['figma', 'vite', 'react', 'scss', 'recoil',],
+    keywordsSecond: ['react-router-dom', 'github-pages'],
+    direction: 'n',
+    imgStyle: { width: '100%', height: '100%', objectPosition: 'center', transition: 'all 0.4s'},
+    githubLink: 'https://github.com/hyoooooojin/dev-kit',
+    figmaLink:'https://www.figma.com/design/Dh3KWyXGAM1sA2Vqr8LFAz/Untitled?node-id=9-3&t=tFdL2DPPJJDHWqo7-1'
   },
   // {
   //   title: 'LOG',
@@ -165,7 +165,7 @@ const Works = () => {
   const isNextDisabled = currentIndex >= slides.length - 3;
 
   return (
-    <div className="works">
+    <section className="works" aria-label="Portfolio works">
       <div className="sliderContainer">
         <KeyboardDoubleArrowLeftIcon 
           onClick={slides.length > 3 && !isPrevDisabled ? prevSlide : null}
@@ -183,15 +183,15 @@ const Works = () => {
             onTransitionEnd={handleTransitionEnd}
           >
             {slides.map((slide, index) => (
-              <div className="work slide" key={index}>
+              <article className="work slide" key={index}>
                 <div className="workTop">
                   <p className="workTitle">{slide.title}</p>
-                  <p className="pageLink"><a href={slide.link} target="_blank">Go to website</a></p>
+                  {/* <p className="pageLink"><a href={slide.link} target="_blank">Go to website</a></p> */}
                   <span className="topkeyword">{slide.topKeyword}</span>
-                  <div className="topActionLink">
+                  {/* <div className="topActionLink">
                     <span><a href={slide.githubLink} target='_black'>Github</a></span>
                     <span><a href={slide.figmaLink} target='_black'>Figma</a></span>
-                  </div>
+                  </div> */}
                 </div>
                 <div
                   className="workCenter"
@@ -213,25 +213,12 @@ const Works = () => {
                     />
                   )}
                 </div>
-                <div className="workBottom">
-                  <div className="keywordBox">
-                    <div className="keywordFirst">
-                      {slide.keywordsFirst.map((keyword, i) => (
-                        <span className="workKeyword" key={i}>{keyword}</span>
-                      ))}
-                    </div>
-                    <div className="keywordSecond">
-                      {slide.keywordsSecond.map((keyword, i) => (
-                        <span className="workKeyword" key={i}>{keyword}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="actionLink">
-                    <span><a href={slide.githubLink} target='_black'>Github</a></span>
-                    <span><a href={slide.figmaLink} target='_black'>Figma</a></span>
-                  </div>
+                <div className="actionLink">
+                  <span className="workKeywords"><a href={slide.link} target='_black'>website</a></span>
+                  <span className="workKeywords"><a href={slide.githubLink} target='_black'>github</a></span>
+                  <span className="workKeywords"><a href={slide.figmaLink} target='_black'>figma</a></span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -245,7 +232,7 @@ const Works = () => {
           }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

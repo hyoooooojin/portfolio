@@ -5,12 +5,13 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 
 const About = () => {
   return (
-    <div className="about">
+    <section className="about" aria-label="Portfolio about">
+
       <div className="infoBox">
         <div className="photo">
-          <img src={photo} alt="" />
+          <img src={photo} alt="프로필 사진" />
         </div>
-       <div className="info">
+        <div className="info">
           <div className="eduBox">
             <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>황효진</p>
           </div>
@@ -27,7 +28,7 @@ const About = () => {
         </div>
         <div className="info">
           <div className="eduBox">
-            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>hy9jin4@gmail.com</p>
+            <p className="infoDesc"><SubdirectoryArrowRightIcon className="infoIcon"/>hyoooooojin@daum.net</p>
           </div>
         </div>
       </div>
@@ -59,6 +60,7 @@ const About = () => {
           </div>
           <div className="skills">
             <span>REACT ROUTER DOM</span> 
+            <span>RECOIL</span> 
           </div>
           <div className="skills">
             <span>GIT</span>
@@ -67,7 +69,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+      
+    </section>
   )
 }
 

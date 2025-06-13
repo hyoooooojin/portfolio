@@ -13,7 +13,6 @@
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: start;
         gap: 1%;
         
         .sliderButton {
@@ -26,12 +25,14 @@
                         display: none;
             }
         }
-
         
         .slider {
             width: 92%;
-            height: 98%;
+            height: 90%;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             @media (max-width: 768px) {
                     overflow: scroll;
@@ -41,6 +42,7 @@
                 width: 100%;
                 height: 100%;
                 display: flex;
+            
                 justify-content: left;
                 gap: 12px;
 
@@ -59,21 +61,24 @@
 
                     .workTop {
                         width: 100%;
-                        height: 15%;
+                        height: 12%;
                         background-color: var(--glass-bg);
                         backdrop-filter: var(--glass-blur);
                         filter: var(--glass-shadow);
                         border: var(--glass-border);
                         border-radius: var(--glass-radius);
                         box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
 
                         .workTitle{
                             font-size: 1em;
                             color: white;
                             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
-                            margin-top: 24px; /* .work의 height값을 없앴더니 margin-top값이 해결 어이가 아리마셍~*/
+                            // margin-top: 24px; /* .work의 height값을 없앴더니 margin-top값이 해결 어이가 아리마셍~*/
                             margin-left: 24px;
-                            margin-bottom: 4px;
+                            // margin-bottom: 4px;
                         }
 
                         .pageLink {
@@ -88,13 +93,11 @@
                         }
 
                         .topkeyword{
-                            position: absolute;
-                            top: 18px;
-                            right: 18px;
                             border: 1px solid white;
                             color: white;
                             padding: 4px 12px;
                             border-radius: 16px;
+                            margin-right: 18px;
 
                             @media (max-width: 980px) {
                                 display: none;
@@ -124,7 +127,7 @@
 
                     .workCenter {
                         width: 100%;
-                        height: 60%;
+                        height: 80%;
                         background-color: var(--glass-bg);
                         backdrop-filter: var(--glass-blur);
                         filter: var(--glass-shadow);
@@ -145,47 +148,101 @@
                                 display: none;
                         }
                     }
+                    .actionLink{
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 5px;
+                    }
+
+                    .workKeywords {
+                                cursor: pointer;
+                                display: inline-block; /* 또는 block, flex 등 */
+                                width: 30%;
+                                text-align: center;
+                                font-size: 0.9em;
+                                color: white ;
+                                padding: 5px 0;
+                                border-radius: 8px;
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                // background-color: rgba(255, 255, 255, 0.3);
+                                background-color:rgba(183, 183, 183, 0.7);
+                                filter: drop-shadow(4px 4px 10px rgb(0, 0, 0));
+                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+                                backdrop-filter: blur(10px);
+                                // box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+                                box-shadow:
+                                    inset 0 1px 3px rgba(255, 255, 255, 0.6),   /* 안쪽 위쪽 밝은 빛 */
+                                    inset 0 -1px 3px rgba(0, 0, 0, 0.2),        /* 안쪽 아래쪽 어두운 그림자 */
+                                    0 4px 6px rgba(0, 0, 0, 0.4);               /* 외부 그림자 (요소가 떠 있는 느낌) */
+                            }
+
+                            .workKeywords:hover{
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+                            }
                     
+                           
+                    
+                    .workkeyworkds:hover{
+                        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+                    }
+
                     .workBottom {
                         width: 100%;
                         height: 24%;
                         background-color: var(--glass-bg);
-                        backdrop-filter: var(--glass-blur);
+                        backdrop-filter: blur(20px);;
                         filter: var(--glass-shadow);
                         border: var(--glass-border);
                         border-radius: var(--glass-radius);
                         box-sizing: border-box;
 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
                          @media (max-width: 768px) {
                                 display: none;
                         }
 
+                        .workBottoms {
+                            font-size: 0.9em;
+                            opacity: 0.5;
+                            color: white;
+                            position: absolute;
+                            top: 18px;
+                            left: 20px;
+                        }
+
                         .keywordBox {
-                            margin-top: 20px;
-                            margin-left: 15px;
+                            background: none;
+                            margin-top: 12px;
 
                             @media (max-width: 1400px) {
                                   display: none;
                                 }
                             
                             .keywordFirst{
-                                margin-bottom: 20px;
+                                margin-bottom: 16px;
                             }
 
                             .keywordSecond{
-                                margin-left: 25px;
+                                
                             }
                         
                             .workKeyword {
-                                font-size: 0.8em;
+                                font-size: 0.95em;
                                 color: white ;
                                 margin-right: 5px;
-                                padding: 5px 10px;
+                                padding: 4px 8px;
                                 border-radius: 8px;
-                                border: 1px solid rgba(255, 255, 255, 0.2);
-                                background-color: rgba(255, 255, 255, 0.5);
-                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
-                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+                                // border: 1px solid rgba(62, 61, 61, 0.2);
+                                // background-color:  rgba(66, 65, 65, 0.5);
+                                // filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.1));
+                                // text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1); /* 텍스트 그림자 */
                             }
                         }
 
